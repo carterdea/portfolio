@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+	<link rel='stylesheet' href='../assets/css/normalize.css'>
+<link rel='stylesheet' href='../assets/css/style.css'>
+	<script src='../assets/js/jquery-1.8.3.min.js'></script>
+<script src='../assets/js/app.js'></script>
+<script src='../assets/js/jquery.backstretch.min.js'></script>
+<script src='../assets/js/jquery.flexverticalcenter.js'></script>
+<script src='../assets/js/jquery.simplemodal.1.4.4.min.js'></script>
+
+	<link href="../assets/favicon.ico" rel="shortcut icon">
+	<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<title>Work</title>
+
+</head>
+
+<body class="work">
+	<div class="container">
+		<header class="cf">
+			<a href="../index.html" class="logo">
+				Carter De Angelis
+				<span class="tagline">Product Designer &amp; Digital Producer</span>
+			</a>
+			<nav>
+	<ul>
+		<li class='current-parent current'><a class='current-parent current' href="index.html">Work</a></li>
+		<li><a href="../about.html">About</a></li>
+		<li class="contact-button"><a href="#" class="button">Contact</a></li>
+	</ul>
+</nav>
+		</header>
+		<section>
+	<a href="spinlister.html">
+		<div class="row cf">
+		<img src="../assets/img/row-spinlister.png" alt="Spinlister" />
+			<div class="text">
+				<h2>Spinlister</h2>
+				<p>We build compelling experiences with brands that get results.</p>
+				<span class="services-rendered">Design, Strategy, Production</span>
+			</div><!--.text-->
+		</div><!--.row-->
+	</a>
+	<a href="#">
+		<div class="row cf">
+		<img src="../assets/img/row-meddevicejobs.png" alt="MedDeviceJobs" />
+			<div class="text">
+				<h2>MedDeviceJobs</h2>
+				<p>We build compelling experiences with brands that get results.</p>
+				<span class="services-rendered">Design, Strategy, Production</span>
+			</div><!--.text-->
+		</div><!--.row-->
+	</a>
+	<a href="#">
+		<div class="row cf">
+			<!--<img src="#" />-->
+			<img src='http://placehold.it/100x100' width='100' height='100' alt='Placeholder Image' />
+			<div class="text">
+				<h2>Content Blvd</h2>
+				<p>We build compelling experiences with brands that get results.</p>
+				<span class="services-rendered">Design, Strategy, Production</span>
+			</div><!--.text-->
+		</div><!--.row-->
+	</a>
+	<a href="#">
+		<div class="row cf">
+			<!--<img src="#" />-->
+			<img src='http://placehold.it/100x100' width='100' height='100' alt='Placeholder Image' />
+			<div class="text">
+				<h2>Wave</h2>
+				<p>We build compelling experiences with brands that get results.</p>
+				<span class="services-rendered">Design, Strategy, Production</span>
+			</div><!--.text-->
+		</div><!--.row-->
+	</a>
+	<p>Some work is protected by NDA. To see this work, contact me and then go to the secret zone.</p>
+			</section>
+			<footer>
+				<p class="copyright">&copy; 2005 - 2013 Carterdea Design, llc.</p>
+			</footer>
+		</div><!--.container-->
+		<div class="contact-modal cf"><div class="modal">
+	<h2>Contact</h2>
+	<p>We&#8217;d love to hear about your project. Please take a look at our previous work and if you think we&#8217;d be a good fit, send us an email. If you would, include as much information as possible. Stuff like your budget, timeline, and any additional materials that would help us better understand your brand and your project.</p>
+	<form>
+		<input type="text" placeholder="name" />
+		<input type="email" placeholder="email">
+		<textarea placeholder="message"></textarea>
+		<p>I’ll get back to you within 48 hours.</p>
+		<button class="button">Send</button>
+	</form>
+	<div class="contact-info">
+		<ul>
+			<li>(424) 268-0717</li>
+			<li>Living in Santa Monica, CA</li>
+			<li><a href="skype:carterdea">carterdea on Skype</a></li>
+			<li><a href="http://twitter.com/carterdea">@carterdea on Twitter</a></li>
+		</ul>
+	</div><!--.contact-info-->
+</div><!--.modal--></div>
+	</body>
+
+</html>

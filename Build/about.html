@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+	<link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+	<script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/app.js'></script>
+<script src='assets/js/jquery.backstretch.min.js'></script>
+<script src='assets/js/jquery.flexverticalcenter.js'></script>
+<script src='assets/js/jquery.simplemodal.1.4.4.min.js'></script>
+
+	<link href="assets/favicon.ico" rel="shortcut icon">
+	<link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<title>About Carter De Angelis | Carter De Angelis &middot;Product Designer &amp; Digital Producer</title>
+
+</head>
+
+<body class="about">
+	<div class="container">
+		<header class="cf">
+			<a href="index.html" class="logo">
+				Carter De Angelis
+				<span class="tagline">Product Designer &amp; Digital Producer</span>
+			</a>
+			<nav>
+	<ul>
+		<li><a href="work/index.html">Work</a></li>
+		<li class='current'><a class='current' href="about.html">About</a></li>
+		<li class="contact-button"><a href="#" class="button">Contact</a></li>
+	</ul>
+</nav>
+		</header>
+		<section>
+	<p class="pitch">Clients approach us at many different points in the life of a product. As a result, we've built a diverse team of world-class designers, developers, marketers, project managers, and QA pros to ensure that we can meet any challenge.</p>
+	<div class="services cf">
+		<h3>Services</h3>
+		<div class="thirds">
+			<i class="strategy"></i>
+			<h2>Product Strategy</h2>
+			<p>With real-time access to reporting data, you can connect Stripe with your existing accounting or ERP systems.</p>
+		</div><!--.thirds-->
+		<div class="thirds">
+			<i class="design"></i>
+			<h2>Product Design</h2>
+			<p>Stripe actively works to protect your business from fraudulent charges and monitors suspicious transactions.</p>
+		</div><!--.thirds-->
+		<div class="thirds">
+			<i class="production"></i>
+			<h2>Digital Production</h2>
+			<p>Work with international customers right out of the box while still getting paid in your preferred currency.</p>
+		</div><!--.thirds-->
+	</div><!--.services-->
+	<p class="pitch">Clients approach us at many different points in the life of a product. As a result, we've built a diverse team of world-class designers, developers, marketers, project managers, and QA pros to ensure that we can meet any challenge.</p>
+	<div class="process cf">
+		<h3>Process</h3>
+		<div class="thirds">
+			<i class="discovery"></i>
+			<h2>Discovery</h2>
+			<p>With real-time access to reporting data, you can connect Stripe with your existing accounting or ERP systems.</p>
+		</div><!--.thirds-->
+		<div class="thirds">
+			<i class="execution"></i>
+			<h2>Execution</h2>
+			<p>Stripe actively works to protect your business from fraudulent charges and monitors suspicious transactions.</p>
+		</div><!--.thirds-->
+		<div class="thirds">
+			<i class="iteration"></i>
+			<h2>Iteration</h2>
+			<p>Work with international customers right out of the box while still getting paid in your preferred currency.</p>
+		</div><!--.thirds-->
+	</div><!--.process-->
+	<div class="bio cf">
+<!--	<img src="#" />-->
+		<img src='http://placehold.it/220x280' width='220' height='280' alt='Placeholder Image' />
+		<div class="text cf">
+			<h2>Carter De Angelis</h2>
+			<h3>Principal</h3>
+			<p>I'm a User Experience Designer living in Santa Monica, California. I help take ideas from concept to reality with my skills in Information Architecture, User Experience Design, User Interface Design, and Product Management. I primarily work with funded Startups, helping them take their product to market, refine their design and concepts, or add features. My unusual blend of technical and design expertise help me deliver user experiences that are beautiful and functional.</p>
+			<ul>
+				<li class="twitter"><a href="http://twitter.com/carterdea">Twitter</a></li>
+				<li class="dribbble"><a href="http://dribbble.com/carterdea">Dribbble</a></li>
+				<li class="skype"><a href="skype:carterdea">Skype</a></li>
+			</ul>
+		</div><!--.text-->
+	</div><!--.bio-->
+	<a href="#" class="button">Contact</a>
+</section>
+</div><!--container-->
+<div class="map cf">
+	<h3>Available for Work in Beautiful Santa Monica</h3>
+	<iframe width='100%' height='350px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/carterdea.g8f59lna.html?secure=1#16/34.012960343509775/-118.49693655967712' style="margin-bottom: -5px;"></iframe>
+</div><!--.map-->
+<div class="contact-modal cf"><div class="modal">
+	<h2>Contact</h2>
+	<p>We&#8217;d love to hear about your project. Please take a look at our previous work and if you think we&#8217;d be a good fit, send us an email. If you would, include as much information as possible. Stuff like your budget, timeline, and any additional materials that would help us better understand your brand and your project.</p>
+	<form>
+		<input type="text" placeholder="name" />
+		<input type="email" placeholder="email">
+		<textarea placeholder="message"></textarea>
+		<p>I’ll get back to you within 48 hours.</p>
+		<button class="button">Send</button>
+	</form>
+	<div class="contact-info">
+		<ul>
+			<li>(424) 268-0717</li>
+			<li>Living in Santa Monica, CA</li>
+			<li><a href="skype:carterdea">carterdea on Skype</a></li>
+			<li><a href="http://twitter.com/carterdea">@carterdea on Twitter</a></li>
+		</ul>
+	</div><!--.contact-info-->
+</div><!--.modal--></div>

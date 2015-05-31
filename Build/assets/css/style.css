@@ -1,0 +1,433 @@
+/* @group Global */
+html, body {
+  height: 100%; }
+
+body {
+  background: #f5f5f5;
+  color: #222;
+  font: 15px/1.33 Apercu, "Helvetica Neue", HelveticaNeue, sans-serif; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+a:hover {
+  border-bottom: 1px solid #222; }
+
+p {
+  margin-bottom: 15px; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 940px;
+  min-height: 100%; }
+
+.rounded {
+  border-radius: 3px; }
+
+.shadowy {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24); }
+
+.clear {
+  clear: both; }
+
+.small {
+  font-size: 11px; }
+
+.button {
+  border-radius: 4px;
+  border: 2px solid #222;
+  color: #222;
+  font-weight: bold;
+  line-height: 1;
+  padding: 12px 27px 10px;
+  text-align: center;
+  text-transform: uppercase; }
+  .button:hover {
+    color: #555;
+    border-color: #555;
+    border-bottom: 2px solid #555; }
+
+.thirds {
+  float: left;
+  width: 300px;
+  margin-left: 20px; }
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+/* @end */
+/* @group Header */
+header {
+  padding-top: 32px;
+  margin-bottom: 100px; }
+
+.logo {
+  color: #222;
+  float: left;
+  font-size: 24px;
+  font-weight: bold; }
+  .logo .tagline {
+    display: block;
+    font-size: 15px; }
+  .logo:hover, .logo:hover .tagline {
+    color: #333;
+    border-bottom: 0; }
+
+nav {
+  float: right; }
+  nav li {
+    list-style: none;
+    float: left;
+    font-weight: bold;
+    margin-left: 33px;
+    text-transform: uppercase; }
+    nav li a {
+      color: #222; }
+      nav li a:hover {
+        border-bottom: 0;
+        color: #555; }
+    nav li.contact-button {
+      /*			margin-top: -12px;*/ }
+      nav li.contact-button a:hover {
+        color: #555;
+        border: 2px solid #555;
+        border-bottom: 2px solid #555; }
+
+/* @end */
+/* @group Content */
+.home h1, .home p {
+  color: #fff;
+  text-align: center; }
+.home p {
+  font-size: 24px;
+  margin-top: 6px; }
+.home section .button {
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+  margin: 15px auto 0;
+  width: 75px; }
+  .home section .button:hover {
+    border-color: #fff;
+    color: #fff; }
+.home .copyright {
+  display: none; }
+
+.work section {
+  margin: 0 auto;
+  width: 540px; }
+.work a {
+  color: #222; }
+  .work a:hover h2, .work a:hover p, .work a:hover span {
+    color: #555; }
+  .work a:hover img {
+    opacity: .8; }
+
+.work-detail h1 {
+  text-align: center;
+  margin-bottom: 50px; }
+.work-detail .initial-screens {
+  display: block;
+  margin: 0 auto 50px;
+  width: 800px; }
+.work-detail .deliverable {
+  margin: 0 auto;
+  width: 780px; }
+  .work-detail .deliverable h3 {
+    border-top: 2px solid #eaeaea;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 17px; }
+.work-detail .quote {
+  border-left: 2px solid #eaeaea;
+  font-size: 24px;
+  margin: 0 auto;
+  padding: 0 35px;
+  width: 710px; }
+  .work-detail .quote .source {
+    font-size: 18px; }
+
+.row {
+  border-bottom: 2px solid #eaeaea;
+  padding: 20px 0; }
+  .row img {
+    float: left;
+    margin-right: 20px; }
+  .row .text {
+    float: right;
+    width: 420px; }
+    .row .text h2 {
+      font-size: 42px;
+      line-height: 0.8;
+      margin-bottom: 7px; }
+    .row .text p {
+      font-size: 18px;
+      margin: 0 0 7px; }
+    .row .text .services-rendered {
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase; }
+
+.pitch {
+  font-size: 24px;
+  margin: 0 auto 100px;
+  width: 780px; }
+
+.services i, .process i {
+  background: url(../img/sprite.png) no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 32px; }
+  .services i.strategy, .process i.strategy {
+    background-position: -47px 0px;
+    height: 32px; }
+  .services i.design, .process i.design {
+    background-position: -20px 0px;
+    width: 25px; }
+  .services i.production, .process i.production {
+    background-position: 0px -35px;
+    width: 28px; }
+  .services i.discovery, .process i.discovery {
+    background-position: 0 0;
+    height: 33px;
+    width: 18px; }
+  .services i.execution, .process i.execution {
+    background-position: -30px -35px;
+    margin-bottom: 2px;
+    width: 23px; }
+  .services i.iteration, .process i.iteration {
+    background-position: -79px 0;
+    height: 27px;
+    margin-bottom: 6px;
+    width: 29px; }
+.services h2, .process h2 {
+  font-size: 18px; }
+.services h3, .process h3 {
+  border-top: 2px solid #eaeaea;
+  font-size: 12px;
+  margin: 0 auto 17px;
+  padding-top: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 300px; }
+.services p, .process p {
+  margin-top: 4px; }
+.services .thirds:nth-child(2), .process .thirds:nth-child(2) {
+  /*		border: 1px solid red;*/
+  margin-left: 0; }
+
+.services, .process {
+  margin-bottom: 100px; }
+
+.bio {
+  margin: 0 auto 100px;
+  width: 620px; }
+
+.bio img {
+  float: left; }
+.bio .text {
+  float: right;
+  width: 380px; }
+  .bio .text h2 {
+    font-size: 24px; }
+  .bio .text h3 {
+    border-bottom: 2px solid #eaeaea;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0 10px;
+    text-transform: uppercase; }
+  .bio .text ul {
+    padding-left: 0; }
+    .bio .text ul li {
+      display: block;
+      float: left;
+      list-style: none;
+      margin-right: 10px;
+      overflow: hidden; }
+      .bio .text ul li a {
+        background: url(../img/sprite.png);
+        display: inline-block;
+        height: 28px;
+        width: 28px;
+        text-indent: 9999px; }
+        .bio .text ul li a:hover {
+          border-bottom: 0; }
+      .bio .text ul li.twitter a {
+        background-position: -79px -29px;
+        height: 24px;
+        margin-top: 1px; }
+      .bio .text ul li.dribbble a {
+        background-position: -28px -69px;
+        height: 24px;
+        margin-top: 1px;
+        width: 24px; }
+      .bio .text ul li.skype a {
+        background-position: 0px -69px;
+        height: 26px;
+        width: 26px; }
+
+.about section .button {
+  display: block;
+  width: 70px;
+  margin: 0 auto; }
+
+.map {
+  margin-top: 50px; }
+  .map h3 {
+    border-top: 2px solid #eaeaea;
+    font-size: 12px;
+    margin: 0 auto 17px;
+    padding-top: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 300px; }
+
+/* @end */
+/* @group Footer */
+.copyright {
+  color: #bbb;
+  font-size: 11px;
+  padding: 50px 0 20px;
+  text-align: center; }
+
+/* @end */
+/* @group Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #363636;
+  font-weight: bold; }
+
+h1 {
+  font-size: 42px; }
+
+h2 {
+  font-size: 15px; }
+
+h3 {
+  font-size: 15px; }
+
+h4 {
+  font-size: 12px; }
+
+/* @end */
+/* @group Modal & Forms */
+.modal {
+  display: none; }
+
+#simplemodal-overlay {
+  background-color: #fff;
+  background: -moz-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0.8)));
+  background: -webkit-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: -o-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ccffffff',GradientType=1 ); }
+
+#simplemodal-container {
+  position: absolute !important;
+  height: 570px;
+  top: 133px !important;
+  width: 620px; }
+  #simplemodal-container .button.simplemodal-close {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #8f323b;
+    color: #8f323b;
+    right: -160px;
+    top: -100px;
+    padding: 14px 38px 11px;
+    position: absolute; }
+    #simplemodal-container .button.simplemodal-close:hover {
+      border-color: #b11623;
+      color: #b11623; }
+  #simplemodal-container .modal {
+    display: block; }
+  #simplemodal-container h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center; }
+  #simplemodal-container p {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 30px; }
+  #simplemodal-container form {
+    width: 380px;
+    float: left; }
+    #simplemodal-container form input, #simplemodal-container form textarea {
+      font-family: Apercu, "Helvetica Neue", sans-serif;
+      background: transparent;
+      border: 2px solid #333;
+      margin-bottom: 14px;
+      padding: 12px 0 10px 10px;
+      font-size: 15px;
+      width: 366px; }
+      #simplemodal-container form input:focus, #simplemodal-container form textarea:focus {
+        background: #fff;
+        -moz-box-shadow: inset 0 0 3px rgba(0, 0, 1, 0.4);
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 1, 0.4);
+        box-shadow: inset 0 0 3px rgba(0, 0, 1, 0.4);
+        outline: none; }
+    #simplemodal-container form textarea {
+      min-height: 200px; }
+    #simplemodal-container form p {
+      font-size: 14px;
+      float: left;
+      margin: 13px 0 0; }
+    #simplemodal-container form button {
+      background: transparent;
+      float: right;
+      font-family: Apercu, "Helvetica Neue", sans-serif;
+      padding-left: 40px;
+      padding-right: 40px; }
+      #simplemodal-container form button:hover, #simplemodal-container form button:focus, #simplemodal-container form button:active {
+        outline: none; }
+      #simplemodal-container form button:active {
+        background: #fff; }
+  #simplemodal-container .contact-info {
+    float: right;
+    width: 220px; }
+    #simplemodal-container .contact-info ul {
+      margin-top: 0;
+      padding-left: 0; }
+      #simplemodal-container .contact-info ul li {
+        list-style: none;
+        margin-bottom: 14px; }
+  #simplemodal-container a.close {
+    border-radius: 4px;
+    border: 2px solid #f00;
+    color: #f00;
+    top: 0px; }
+
+/* @end */
