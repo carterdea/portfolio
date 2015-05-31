@@ -5,6 +5,8 @@ My personal site (that will likely never launch). The photo was licensed, but th
 - Figure out what I want to put on it
 - Finish the copy
 - Finish the content
+- Use CSS instead of backstretch.js
+- Change the CSS to be mobile first
 - Figure out what to do w/ the non retina images & sprites (SVG? Icon Font? Compass?)
 
 ## Dependencies
