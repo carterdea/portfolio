@@ -347,13 +347,13 @@ h4 {
 
 #simplemodal-overlay {
   background-color: #fff;
-  background: -moz-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0.8)));
-  background: -webkit-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
-  background: -o-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
-  background: -ms-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.8) 100%);
-  background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0.8) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ccffffff',GradientType=1 ); }
+  background: -moz-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0.9)));
+  background: -webkit-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  background: -o-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0.9) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ccffffff',GradientType=1 ); }
 
 #simplemodal-container {
   position: absolute !important;

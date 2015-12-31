@@ -13,12 +13,13 @@
                 if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -61,11 +62,10 @@
 		</header>
 		<section>
 	<h1>Product Design for startups in Los Angeles.</h1>
-	<p>Gin Lane is a collective of over two dozen creative technologists. We build compelling experiences with brands that get results.</p>
+	<p>Carterdea is a design and development studio led by Carter De Angelis. We work with startups and small-ish businesses.</p>
 	<a href="work/index.html" class="button">See Work</a>
 	<script>
 		$(document).ready(function(){
-		  
 			$.backstretch("../assets/img/home-hero.jpg");
 		});
 	</script>
@@ -87,7 +87,7 @@
 	<div class="contact-info">
 		<ul>
 			<li>(424) 268-0717</li>
-			<li>Living in Santa Monica, CA</li>
+			<li>Santa Monica, CA</li>
 			<li><a href="skype:carterdea">carterdea on Skype</a></li>
 			<li><a href="http://twitter.com/carterdea">@carterdea on Twitter</a></li>
 		</ul>
